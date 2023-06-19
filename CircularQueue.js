@@ -65,12 +65,20 @@ export default class CircularQueue{
         return value
     }
 
+    /**
+     * 
+     * @returns Element at the front of the queue
+     */
     getFront() {
         if (this.isEmpty()){
             throw (new Error("No elements in the queue"));
         } 
         return this.element[this.front % this.size]
     }
+
+    /**
+     * Clears the queue and starts a new one.
+     */
     clear() {
         this.element = new Array()
         this.length = 0
